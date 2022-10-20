@@ -17,7 +17,7 @@ class Api {
   get_api_path(object, template) {
     const arrayKeysOfUserObject = Object.keys(object)
     arrayKeysOfUserObject.forEach(key => {
-      template = template.replace(`%${key}%`, object[key].toString().replace(/ /g, '%20'))
+      template = template.replace(`%${key}%`, object[key].toString().replace(/\s/g, '%20'))
     })
     return template;
   }
