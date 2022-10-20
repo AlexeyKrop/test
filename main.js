@@ -15,9 +15,9 @@ class Api {
    */
 
   get_api_path(object, template) {
-    let str = ''
+    let str = '';
+    const regex = /%|%/g;
     template.split('/').forEach(el => {
-      const regex = /%|%/g;
       if(el.match(regex)){
         el = object[el.replaceAll(`%`, '')]
         if(typeof el === "string"){
