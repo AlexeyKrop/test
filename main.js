@@ -26,7 +26,7 @@ class Api {
       }
       str += el + '/'
     })
-    return str
+    return str.slice(0, -1)
   }
 }
 
